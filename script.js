@@ -42,12 +42,9 @@ function render() {
     
 
 function generateCircleSVG() {
-    // Radius of the circle
     const radius = 30;
-    // Circumference of the circle
     const circumference = 2 * Math.PI * radius;
 
-    // Return the SVG string with embedded CSS for animation
     return `
 <svg width="70" height="70" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
     <style>
@@ -68,17 +65,15 @@ function generateCircleSVG() {
 
 
 function generateXCrossSVG() {
-    // Length of the diagonal line
     const diagonalLength = Math.sqrt(Math.pow(70, 2) + Math.pow(70, 2));
-    
-    // Return the SVG string with embedded CSS for animation
+
     return `
 <svg width="70" height="70" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
     <style>
         .line {
             stroke-dasharray: ${diagonalLength};
             stroke-dashoffset: ${diagonalLength};
-            animation: drawLine 2s forwards;
+            animation: drawLine 1s forwards;
         }
         @keyframes drawLine {
             to {
